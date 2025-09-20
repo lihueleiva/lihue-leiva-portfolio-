@@ -1,0 +1,9 @@
+.d-flex .nav-link i {
+  transition: transform 0.2s ease-in-out;
+}
+
+.d-flex .nav-link:hover i {
+  transform: scale(1.2);
+  color: #0d6efd;
+
+}
