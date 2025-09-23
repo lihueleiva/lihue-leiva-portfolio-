@@ -1,31 +1,32 @@
+@use "sass:math";
+@use "sass:string";
+
 @use "bootstrap/scss/bootstrap";
 
 body {
   background-color: #0c0c14;
   color: #f8f9fa;
   font-family: 'Roboto', sans-serif;
-  overflow: hidden; // Previene barras de scroll por las animaciones
+  overflow: hidden;
 }
 
-// Creamos 3 capas de "estrellas" con diferentes tamaños y velocidades
-// para dar un efecto de paralaje y profundidad.
 .particles {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; // Detrás de todo el contenido
+  z-index: -1;
 }
 
 @function create-stars($n) {
-  $shadows: "#{random(2000)}px #{random(2000)}px #FFF";
+  $shadows: "#{math.random(2000)}px #{math.random(2000)}px #FFF";
 
   @for $i from 2 through $n {
-    $shadows: "#{$shadows} , #{random(2000)}px #{random(2000)}px #FFF";
+    $shadows: "#{$shadows} , #{math.random(2000)}px #{math.random(2000)}px #FFF";
   }
 
-  @return unquote($shadows);
+  @return string.unquote($shadows);
 }
 
 #stars1 {
