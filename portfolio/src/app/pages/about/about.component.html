@@ -1,1 +1,54 @@
-<p>about works!</p>
+<section class="about-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold">Sobre Mí</h2>
+      <p class="lead text-muted">Un vistazo a mi perfil profesional y mis capacidades técnicas.</p>
+      <hr class="mx-auto" style="width: 50px; border-top: 3px solid #f97794;" />
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h3 class="mb-3">¿Quién soy?</h3>
+        <p class="text-secondary">
+          Soy un desarrollador apasionado por la creación de interfaces de usuario dinámicas y eficientes. Con una sólida base en el desarrollo web y especialización en Angular, disfruto convirtiendo ideas complejas en aplicaciones web robustas e intuitivas. Mi objetivo es aportar valor a través de código limpio, mantenible y escalable.
+        </p>
+        <p class="text-secondary">
+          Busco constantemente aprender nuevas tecnologías y mejorar mis habilidades, utilizando herramientas de IA para optimizar mi flujo de trabajo y potenciar mi productividad.
+        </p>
+      </div>
+
+      <div class="col-lg-6">
+        <h3 class="mb-3">Habilidades Técnicas</h3>
+        <div class="skills-container">
+          <span class="skill-tag">Angular</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">JavaScript (ES6+)</span>
+          <span class="skill-tag">RxJS</span>
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">SCSS</span>
+          <span class="skill-tag">Bootstrap</span>
+          <span class="skill-tag">Git & GitHub</span>
+          <span class="skill-tag">POO</span>
+          <span class="skill-tag">Prompt Engineering</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5 pt-4">
+      <h3 class="mb-5">Certificaciones y Formación</h3>
+      <div class="row g-4">
+        @for (cert of certificates; track cert.title) {
+        <div class="col-lg-4 col-md-6">
+          <div class="certificate-card">
+            <img [src]="cert.imageUrl" [alt]="'Certificado de ' + cert.title + ' por ' + cert.issuer" class="img-fluid" />
+            <div class="card-overlay">
+              <h5 class="card-title">{{ cert.title }}</h5>
+              <p class="card-issuer">{{ cert.issuer }}</p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

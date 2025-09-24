@@ -1,0 +1,34 @@
+.about-section {
+  background-color: #161b22; // Mismo fondo que la hero-section
+  border-radius: 0.75rem;
+  padding: 40px;
+  border: 1px solid #30363d;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; // Espacio entre tags
+}
+
+.skill-tag {
+  background-color: #30363d; // Un fondo oscuro pero diferente
+  color: #c9d1d9;
+  padding: 8px 15px;
+  border-radius: 20px; // Píldoras redondeadas
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #495057;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(90deg, #f97794, #8778d3);
+    color: #fff;
+    transform: translateY(-2px);
+    border-color: transparent;
+  }
+}
+
+.text-muted {
+  color: #8b949e !important;
+}
